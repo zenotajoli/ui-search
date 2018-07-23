@@ -5,6 +5,7 @@ import { withRouter } from 'react-router';
 import makeQueryFunction from '@folio/stripes-components/util/makeQueryFunction';
 import SearchAndSort from '@folio/stripes-smart-components/lib/SearchAndSort';
 import { filterState } from '@folio/stripes-components/lib/FilterGroups';
+import IconWithText from '@folio/stripes-components/lib/IconWithText';
 import AppIcon from '@folio/stripes-components/lib/AppIcon';
 import ViewRecord from './ViewRecord';
 import redirectParams from './redirectParams';
@@ -191,16 +192,12 @@ class Search extends React.Component {
   render() {
     const resultsFormatter = {
       source: x => (
-        <span>
-          <AppIcon
-            app={x.source === 'local' ? 'inventory' : 'eholdings'}
-            iconKey={x.source === 'local' ? 'instance' : 'app'}
-            size="small"
-          />
-          &nbsp;
-          &nbsp;
-          {x.source === 'local' ? 'Local' : 'KB'}
-        </span>),
+        <IconWithText
+          text={x.source === 'local' ? 'Local' : 'KB'}
+          app={x.source === 'local' ? 'inventory' : 'eholdings'}
+          icon={x.source === 'local' ? 'instance' : 'app'}
+        />
+      ),
       contributor: x => (x.contributor || []).map(y => `'${y.name}'`).join(', '),
     };
 
