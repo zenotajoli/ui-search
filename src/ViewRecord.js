@@ -30,20 +30,20 @@ function renderBody(record) {
 
 
 class ViewRecord extends React.Component {
-  static propTypes = {
-    paneWidth: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired,
-    resources: PropTypes.shape({
-      record: PropTypes.object,
-    }),
-  }
-
   static manifest = Object.freeze({
     record: {
       type: 'okapi',
       path: 'codex-instances/:{id}',
     },
   });
+
+  static propTypes = {
+    paneWidth: PropTypes.string.isRequired,
+    onClose: PropTypes.func.isRequired,
+    resources: PropTypes.shape({
+      record: PropTypes.object,
+    }),
+  };
 
   render() {
     const records = _.get(this.props.resources, ['record', 'records']) || [];

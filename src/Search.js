@@ -100,25 +100,6 @@ const availableIndexes = [
 
 
 class Search extends React.Component {
-  static propTypes = {
-    resources: PropTypes.shape({
-      query: PropTypes.shape({
-        qindex: PropTypes.string,
-        query: PropTypes.string,
-      }),
-    }),
-    mutator: PropTypes.shape({
-      query: PropTypes.shape({
-        update: PropTypes.func.isRequired,
-      }),
-    }),
-    stripes: PropTypes.shape({
-      logger: PropTypes.shape({
-        log: PropTypes.func.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }
-
   static manifest = Object.freeze({
     resultCount: { initialValue: 30 },
     query: { initialValue: {} },
@@ -142,6 +123,25 @@ class Search extends React.Component {
       },
     },
   });
+
+  static propTypes = {
+    resources: PropTypes.shape({
+      query: PropTypes.shape({
+        qindex: PropTypes.string,
+        query: PropTypes.string,
+      }),
+    }),
+    mutator: PropTypes.shape({
+      query: PropTypes.shape({
+        update: PropTypes.func.isRequired,
+      }),
+    }),
+    stripes: PropTypes.shape({
+      logger: PropTypes.shape({
+        log: PropTypes.func.isRequired,
+      }).isRequired,
+    }).isRequired,
+  };
 
   onChangeIndex = (e) => {
     const qindex = e.target.value;
