@@ -1,5 +1,9 @@
 # Change history for ui-search
 
+## 1.10.0 (IN PROGRESS)
+
+* Upgrade react-router-dom to v5 and move it to peerDependencies. Refs STCOM-581.
+
 ## [1.9.0](https://github.com/folio-org/ui-search/tree/v1.9.0) (2019-09-10)
 [Full Changelog](https://github.com/folio-org/ui-search/compare/v1.8.0...v1.9.0)
 
