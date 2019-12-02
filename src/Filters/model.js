@@ -131,4 +131,7 @@ export const languages = [
   {
     value: 'ara'
   },
+  {
+    value: 'ita'
+  },
 ];

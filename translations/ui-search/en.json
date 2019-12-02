@@ -56,5 +56,6 @@
   "filters.languages.ger": "German",
   "filters.languages.chi": "Mandarin",
   "filters.languages.rus": "Russian",
-  "filters.languages.ara": "Arabic"
+  "filters.languages.ara": "Arabic",
+  "filters.languages.ita": "Italian"
 }
